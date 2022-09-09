@@ -286,7 +286,10 @@ return require('packer').startup(function(use)
       { 'windwp/nvim-autopairs', config = [[require'cfg.auto-pairs']] },
       { 'junegunn/vim-easy-align', config = [[require'cfg.easy-align']] },
     }
-    
+
+    -- ranger plugin
+    use	'kevinhwang91/rnvimr'
+
     use{
 	'Shatur/neovim-session-manager',
 	requires = 'nvim-lua/plenary.nvim',
