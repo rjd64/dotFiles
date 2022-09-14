@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
           'nvim-telescope/telescope-fzf-native.nvim', -- telescope extensions
           'nvim-telescope/telescope-file-browser.nvim',
           'nvim-telescope/telescope-packer.nvim',
-          --'nvim-telescope/telescope-github.nvim',
+          'nvim-telescope/telescope-github.nvim',
           'nvim-telescope/telescope-media-files.nvim',
           'cljoly/telescope-repo.nvim',
         },
@@ -150,13 +150,6 @@ return require('packer').startup(function(use)
         event = 'CmdlineEnter',
       }
     }
-
-    -- vim database integration
-    -- use {
-    --   'tpope/vim-dadbod',
-    --   requires = 'kristijanhusak/vim-dadbod-ui',
-    --   cmd = { 'DB', 'DBUI' },
-    -- }
 
     -- kitty terminal plugins
     use {

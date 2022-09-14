@@ -1,5 +1,5 @@
 require('toggleterm').setup{
-  direction = 'float',
+  direction = 'horizontal',
   open_mapping = '<leader>t',
 
   insert_mapping = true,
@@ -7,7 +7,6 @@ require('toggleterm').setup{
 
   persist_mode = true,
   close_on_exit = true,
-
 
   shade_terminals = true,
   float_opts = {

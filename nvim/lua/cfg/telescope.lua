@@ -5,8 +5,8 @@ local trouble = require('trouble.providers.telescope')
 -- telescope extensions
 --local gh = telescope.extensions.gh
 --local repo = telescope.extensions.repo
---local file_browser = telescope.extensions.file_browser
---local media_files = telescope.extensions.media_files
+local file_browser = telescope.extensions.file_browser
+local media_files = telescope.extensions.media_files
 
 
 -- telescope setup function
@@ -58,7 +58,7 @@ telescope.setup{
       hijack_netrw = true,
     },
     media_files = {
-      filetypes = {'png', 'webp', 'jpg', 'jpeg'},
+      filetypes = {'pdf','png', 'webp', 'jpg', 'jpeg'},
       find_cmd = 'rg',
     } 
   },
