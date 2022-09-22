@@ -1,0 +1,43 @@
+#!/bin/bash
+# File  : .bash_prof
+# Author: Ryan Dibble <rjd64@pitt.edu>
+# Date  : 22.09.2022
+
+#alias assignments
+alias gs='git status'
+alias gb='git branch'
+alias gf='git fetch'
+alias ga='git add'
+alias gg='git log --all --decorate --oneline --graph'
+alias vim='nvim'
+alias vi='nvim'
+alias ls="ls -G"
+alias lsa="ls -l -a -G"
+alias ll="ls -l"
+
+export EDITOR=/usr/local/bin/nvim
+export VISUAL=/usr/local/bin/nvim
+
+#pyenv setup
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+#FS setup..silence stdout for PS1
+export FREESURFER_HOME=/Applications/freesurfer/7.1.1/
+source $FREESURFER_HOME/SetUpFreesurfer.sh > /dev/null
+#ANTs setup
+export ANTSPATH=~/ANTs/install/bin/
+export PATH=${ANTSPATH}:$PATH
+
+#pydti Path setup
+export PYTHONPATH=~/NDRD/:$PYTHONPATH
+export PYTHONPATH=~/NDRD/pydti:$PYTHONPATH
+export PYTHONPATH=~/NDRD/pydti/pydti:$PYTHONPATH
+
+# FSL Setup
+FSLDIR=/usr/local/fsl
+PATH=${FSLDIR}/bin:${PATH}
+export FSLDIR PATH
+. ${FSLDIR}/etc/fslconf/fsl.sh
+
