@@ -1,7 +1,4 @@
 #!/bin/bash
-# File  : .bash_prof
-# Author: Ryan Dibble <rjd64@pitt.edu>
-# Date  : 22.09.2022
 
 #alias assignments
 alias gs='git status'
@@ -9,6 +6,7 @@ alias gb='git branch'
 alias gf='git fetch'
 alias ga='git add'
 alias gg='git log --all --decorate --oneline --graph'
+alias gc='git checkout'
 alias vim='nvim'
 alias vi='nvim'
 alias ls="ls -G"
@@ -17,6 +15,8 @@ alias ll="ls -l"
 
 export EDITOR=/usr/local/bin/nvim
 export VISUAL=/usr/local/bin/nvim
+#export VIM=/usr/local/bin/nvim
+#export VIMRUNTIME=/usr/local/share/nvim/runtime
 
 #pyenv setup
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -40,4 +40,6 @@ FSLDIR=/usr/local/fsl
 PATH=${FSLDIR}/bin:${PATH}
 export FSLDIR PATH
 . ${FSLDIR}/etc/fslconf/fsl.sh
+
+export PS1="\[$(tput bold)\]\[\033[38;5;238m\]\u\[$(tput sgr0)\] \T \[$(tput sgr0)\]\[\033[38;5;244m\][\[$(tput sgr0)\]\[\033[38;5;65m\]\w\[$(tput sgr0)\]\[\033[38;5;244m\]]\[$(tput sgr0)\]: \\$ \[$(tput sgr0)\]"
 

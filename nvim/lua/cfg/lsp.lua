@@ -51,9 +51,9 @@ local callback = function(_, bufn)
 end
 
 
--- disable diagnostic inline virtual text and sign column, keep underline
-  -- use trouble as interface to diagnostics
---vim.diagnostic.config({virtual_text = false, signs = false})
+--disable diagnostic inline virtual text and sign column, keep underline
+--  use trouble as interface to diagnostics
+vim.diagnostic.config({virtual_text = false, signs = false})
 
 -- add command alias A for alternate
 vim.cmd[[cnoreabbrev A ClangdSwitchSourceHeader]]
