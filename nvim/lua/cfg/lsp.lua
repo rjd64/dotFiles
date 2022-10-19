@@ -3,7 +3,8 @@ local lspconfig = require('lspconfig')
 local cmp = require('cmp_nvim_lsp')
 
 --create nvim-cmp capabilities for lsp client
-local cap = cmp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- local cap = cmp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local cap = cmp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local function list_ws_folders()
   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))

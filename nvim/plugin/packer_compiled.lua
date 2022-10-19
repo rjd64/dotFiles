@@ -167,11 +167,6 @@ _G.packer_plugins = {
     path = "/Users/ryandibble/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
-  ["fine-cmdline.nvim"] = {
-    loaded = true,
-    path = "/Users/ryandibble/.local/share/nvim/site/pack/packer/start/fine-cmdline.nvim",
-    url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
-  },
   ["gitsigns.nvim"] = {
     config = { "require'cfg.gitsigns'" },
     loaded = false,
@@ -225,11 +220,6 @@ _G.packer_plugins = {
     path = "/Users/ryandibble/.local/share/nvim/site/pack/packer/start/neovim-session-manager",
     url = "https://github.com/Shatur/neovim-session-manager"
   },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/Users/ryandibble/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
-  },
   ["nvim-autopairs"] = {
     config = { "require'cfg.auto-pairs'" },
     loaded = true,
@@ -260,7 +250,7 @@ _G.packer_plugins = {
     url = "https://github.com/kosayoda/nvim-lightbulb"
   },
   ["nvim-lspconfig"] = {
-    after = { "nvim-code-action-menu", "nvim-lightbulb" },
+    after = { "nvim-lightbulb", "nvim-code-action-menu" },
     config = { "require'cfg.lsp'" },
     loaded = true,
     only_config = true,
@@ -527,6 +517,42 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: telescope-file-browser.nvim
+time([[Config for telescope-file-browser.nvim]], true)
+require'cfg.telescope-file-browser'
+time([[Config for telescope-file-browser.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require'cfg.auto-pairs'
+time([[Config for nvim-autopairs]], false)
+-- Config for: dressing.nvim
+time([[Config for dressing.nvim]], true)
+require'cfg.dressing'
+time([[Config for dressing.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require'cfg.lsp'
+time([[Config for nvim-lspconfig]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+require'cfg.trouble'
+time([[Config for trouble.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require'cfg.cmp'
+time([[Config for nvim-cmp]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+require'cfg.surround'
+time([[Config for nvim-surround]], false)
+-- Config for: vim-dispatch-neovim
+time([[Config for vim-dispatch-neovim]], true)
+require'cfg.dispatch'
+time([[Config for vim-dispatch-neovim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+require'cfg.comment'
+time([[Config for Comment.nvim]], false)
 -- Config for: nvim-rooter.lua
 time([[Config for nvim-rooter.lua]], true)
 require'cfg.rooter'
@@ -535,58 +561,22 @@ time([[Config for nvim-rooter.lua]], false)
 time([[Config for neovim-session-manager]], true)
 require'cfg.session-manager'
 time([[Config for neovim-session-manager]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-require'cfg.trouble'
-time([[Config for trouble.nvim]], false)
--- Config for: vim-dispatch-neovim
-time([[Config for vim-dispatch-neovim]], true)
-require'cfg.dispatch'
-time([[Config for vim-dispatch-neovim]], false)
--- Config for: neoscroll.nvim
-time([[Config for neoscroll.nvim]], true)
-require'cfg.scroll'
-time([[Config for neoscroll.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require'cfg.alpha'
-time([[Config for alpha-nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require'cfg.telescope'
-time([[Config for telescope.nvim]], false)
 -- Config for: vim-easy-align
 time([[Config for vim-easy-align]], true)
 require'cfg.easy-align'
 time([[Config for vim-easy-align]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require'cfg.auto-pairs'
-time([[Config for nvim-autopairs]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-require'cfg.surround'
-time([[Config for nvim-surround]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require'cfg.lsp'
-time([[Config for nvim-lspconfig]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-require'cfg.comment'
-time([[Config for Comment.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require'cfg.cmp'
-time([[Config for nvim-cmp]], false)
--- Config for: telescope-file-browser.nvim
-time([[Config for telescope-file-browser.nvim]], true)
-require'cfg.telescope-file-browser'
-time([[Config for telescope-file-browser.nvim]], false)
--- Config for: dressing.nvim
-time([[Config for dressing.nvim]], true)
-require'cfg.dressing'
-time([[Config for dressing.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require'cfg.alpha'
+time([[Config for alpha-nvim]], false)
+-- Config for: neoscroll.nvim
+time([[Config for neoscroll.nvim]], true)
+require'cfg.scroll'
+time([[Config for neoscroll.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require'cfg.telescope'
+time([[Config for telescope.nvim]], false)
 -- Config for: telescope-fzf-native.nvim
 time([[Config for telescope-fzf-native.nvim]], true)
 require'cfg.telescope-fzf-native'
@@ -604,20 +594,20 @@ time([[Sequenced loading]], false)
 time([[Defining lazy-load commands]], true)
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file UndotreeToggle lua require("packer.load")({'undotree'}, { cmd = "UndotreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Vista lua require("packer.load")({'vista.vim'}, { cmd = "Vista", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file TSPlaygroundToggle lua require("packer.load")({'playground'}, { cmd = "TSPlaygroundToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file CodeActionMenu lua require("packer.load")({'nvim-code-action-menu'}, { cmd = "CodeActionMenu", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Octo lua require("packer.load")({'octo.nvim'}, { cmd = "Octo", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file TSPlaygroundToggle lua require("packer.load")({'playground'}, { cmd = "TSPlaygroundToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
-vim.cmd [[noremap <silent> <leader>v <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>v", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> <leader>t <cmd>lua require("packer.load")({'toggleterm.nvim'}, { keys = "<lt>leader>t", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> <leader>vf <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>vf", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> <leader>vs <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>vs", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> <leader>vv <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>vv", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> <leader>vt <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>vt", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> <leader>vl <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>vl", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <leader>v <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>v", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <leader>t <cmd>lua require("packer.load")({'toggleterm.nvim'}, { keys = "<lt>leader>t", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <leader>vt <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>vt", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <leader>vv <cmd>lua require("packer.load")({'vista.vim'}, { keys = "<lt>leader>vv", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
@@ -631,7 +621,7 @@ time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'toggleterm.nvim', 'telescope-repo.nvim', 'telescope-packer.nvim', 'telescope-media-files.nvim', 'telescope-github.nvim'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'gitsigns.nvim', 'nvim-treesitter', 'marks.nvim', 'tabline.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'marks.nvim', 'gitsigns.nvim', 'nvim-treesitter', 'tabline.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
