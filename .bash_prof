@@ -12,6 +12,7 @@ alias vi='nvim'
 alias ls="ls -G"
 alias lsa="ls -l -a -G"
 alias ll="ls -l"
+alias CPP="clang++"
 
 export EDITOR=/usr/local/bin/nvim
 export VISUAL=/usr/local/bin/nvim
