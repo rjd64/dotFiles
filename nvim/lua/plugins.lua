@@ -68,8 +68,8 @@ return require('packer').startup(function(use)
       'hrsh7th/nvim-cmp',
       -- various nvim-cmp source plugins
       requires = {
-        'dcampos/nvim-snippy', -- TextMate style snippets plugin
-        'dcampos/cmp-snippy',
+        'dcampos/nvim-snippy', -- TextMate style snippets plugin 
+        'dcampos/cmp-snippy', 
         'hrsh7th/cmp-calc', -- sources from plugin author
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-buffer',
