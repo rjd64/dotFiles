@@ -9,7 +9,7 @@ return {
 	      config = function()
 		      require'cfg.vista'
 	      end,
-	      cmd = 'Vista',
+	      -- cmd = 'Vista',
 	      --keys = {
 		--'<leader>v',   -- toggle vista window
 		--'<leader>vv',  -- focus vista window
