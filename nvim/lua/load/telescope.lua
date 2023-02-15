@@ -1,7 +1,10 @@
 return {
   {
      "nvim-telescope/telescope.nvim",
-     dependencies = "nvim-lua/plenary.nvim",
+     dependencies = {
+             "nvim-lua/plenary.nvim",
+             "nvim-lua/popup.nvim",
+     },
      config = function()
        require("cfg.telescope")
      end,
@@ -30,14 +33,14 @@ return {
      end,
      event = 'CmdlineEnter',
    },
-   {
-     "luc-tielen/telescope_hoogle",
-     dependencies = "nvim-telescope/telescope.nvim",
-     config = function()
-       require("telescope").load_extension("hoogle")
-     end,
-     event = 'CmdlineEnter',
-   },
+   -- {
+   --   "luc-tielen/telescope_hoogle",
+   --   dependencies = "nvim-telescope/telescope.nvim",
+   --   config = function()
+   --     require("telescope").load_extension("hoogle")
+   --   end,
+   --   event = 'CmdlineEnter',
+   -- },
    {
      "nvim-telescope/telescope-ui-select.nvim",
      dependencies = "nvim-telescope/telescope.nvim",
