@@ -6,9 +6,6 @@ g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 g.loaded_netrwSettings = 1
 
-g.do_filetype_lua = 1
-g.did_load_filetypes = 0
-
 set.wildignore = {'*.o', '*.so', '*.pyc', '*.class', '*.hi'}
 
 set.confirm = true
@@ -32,6 +29,7 @@ set.lazyredraw = true
 set.tw = 80
 set.linebreak = true
 set.breakindent =true
+set.expandtab = true
 
 -- search
 set.hlsearch = true
@@ -46,7 +44,7 @@ vim.cmd [[set grepformat=%f:%l:%c:%m,%f:%l:%m]]
 -- colorscheme
 --vim.cmd [[colorscheme monokai_soda]]
 --vim.cmd [[colorscheme nord]]
-vim.cmd [[colorscheme iceberg]]
+--vim.cmd [[colorscheme iceberg]]
 --vim.cmd [[colorscheme gruvbox]]
 -- treesitter fold settings ?
 

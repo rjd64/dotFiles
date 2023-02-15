@@ -32,4 +32,9 @@ vim.g.vista_executive_for = {
   cmake = 'nvim_lsp',
   cpp = 'nvim_lsp',
   python = 'nvim_lsp',
+  bash = 'nvim_lsp',
+  lua = 'nvim_lsp',
+  json = 'nvim_lsp',
+  css = 'nvim_lsp',
+  html = 'nvim_lsp',
 }
