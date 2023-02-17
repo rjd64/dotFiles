@@ -4,6 +4,7 @@ return {
 		build = 'cp ./*.py ~/.config/kitty',
 	},
 
+        -- plugin to view and search LSP symbols
 	{
 	      'liuchengxu/vista.vim',
 	      config = function()
@@ -20,14 +21,16 @@ return {
 	      --},
 	},
 
+        -- better handling of diagnostics
 	{                                  
-	      'folke/trouble.nvim',  -- better handling of diagnostics
+	      'folke/trouble.nvim',  
 	      dependencies = 'kyazdani42/nvim-web-devicons',
 	      config = function()
 		      require'cfg.trouble'
 	      end,
     	},
 
+        -- better terminal emulator in buffer
 	{
 	      "akinsho/toggleterm.nvim",
 	      version = 'v2.*',
@@ -38,6 +41,7 @@ return {
 	      --keys = '<leader>t'
     	},
 
+        -- manage sessions like folders in VSCode
 	{
 		'Shatur/neovim-session-manager',
 		dependencies = 'nvim-lua/plenary.nvim',
@@ -45,5 +49,11 @@ return {
 			require'cfg.session-manager'
 		end,
 	},
+
+        -- run python code in current buffer
+        -- {
+        --        'smzm/hydrovim',
+        --        dependencies = 'MunifTanjim/nui.nvim',
+        -- },
 	
 }

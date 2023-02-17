@@ -41,6 +41,9 @@ set.smartcase = true
 vim.cmd [[set grepprg=rg\ --vimgrep\ --no-heading]]
 vim.cmd [[set grepformat=%f:%l:%c:%m,%f:%l:%m]]
 
+-- formatting
+-- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+
 -- colorscheme
 --vim.cmd [[colorscheme monokai_soda]]
 --vim.cmd [[colorscheme nord]]
