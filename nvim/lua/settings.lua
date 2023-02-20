@@ -1,7 +1,8 @@
 local set = vim.opt
 local g = vim.g
 
-g.loaded_python3_provider = 0
+g.python3_host_prog = '/Users/ryandibble/.pyenv/versions/3.10.0/bin/python'
+-- g.loaded_python3_provider = 0 
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 g.loaded_netrwSettings = 1
