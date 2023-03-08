@@ -28,7 +28,7 @@ require('lualine').setup {
     icons_enabled = true,
     -- theme = 'molokai',
     --theme = 'powerline_dark',
-    theme = 'nord',
+    theme = 'kanagawa',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
