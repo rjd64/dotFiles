@@ -25,11 +25,12 @@ return{
         'weilbith/nvim-code-action-menu', -- floating menu interface for ca's
         cmd = 'CodeActionMenu',
       },
+
       {
-              'pixelneo/vim-python-docstring', --better python docstring
-              config = function()
-                      vim.g.python_style = 'numpy'
-              end,
+        'pixelneo/vim-python-docstring', --better python docstring
+        config = function()
+                 vim.g.python_style = 'numpy'
+        end,
 
       },
 

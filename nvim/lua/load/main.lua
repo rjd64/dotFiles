@@ -10,15 +10,15 @@ return {
 	      config = function()
 		      require'cfg.vista'
 	      end,
-	      -- cmd = 'Vista',
-	      --keys = {
-		--'<leader>v',   -- toggle vista window
-		--'<leader>vv',  -- focus vista window
-		--'<leader>vt',  -- open vista ctags 
-		--'<leader>vl',  -- open vista lsp
-		--'<leader>vs',  -- show vista
-		--'<leader>vf',  -- open vista finder
-	      --},
+	      cmd = 'Vista',
+	      keys = {
+		'<leader>v',   -- toggle vista window
+		'<leader>vv',  -- focus vista window
+		'<leader>vt',  -- open vista ctags 
+		'<leader>vl',  -- open vista lsp
+		'<leader>vs',  -- show vista
+		'<leader>vf',  -- open vista finder
+	      },
 	},
 
         -- better handling of diagnostics
@@ -37,8 +37,8 @@ return {
 	      config = function()
 		      require'cfg.toggleterm'
 	      end,
-	      --event = 'CmdlineEnter',
-	      --keys = '<leader>t'
+	      event = 'CmdlineEnter',
+	      keys = '<leader>t'
     	},
 
         -- manage sessions like folders in VSCode
@@ -50,10 +50,4 @@ return {
 		end,
 	},
 
-        -- run python code in current buffer
-        -- {
-        --        'smzm/hydrovim',
-        --        dependencies = 'MunifTanjim/nui.nvim',
-        -- },
-	
 }

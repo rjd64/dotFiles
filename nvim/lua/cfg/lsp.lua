@@ -94,3 +94,12 @@ lspconfig.texlab.setup{
     telemetry = {enable = false},
   },
 }
+-- -- setup jdtls (java) language server
+lspconfig.jdtls.setup{
+  on_attach = callback,
+  settings = {
+    capabilities = cap,
+    telemetry = {enable = false},
+  },
+}
+
