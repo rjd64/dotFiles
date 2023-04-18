@@ -96,6 +96,7 @@ lspconfig.texlab.setup{
 }
 -- -- setup jdtls (java) language server
 lspconfig.jdtls.setup{
+  cmd = {'/usr/local/bin/jdtls'} ,
   on_attach = callback,
   settings = {
     capabilities = cap,
