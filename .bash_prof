@@ -15,7 +15,7 @@ alias lsa="ls -l -a -G"
 alias ll="ls -l"
 alias CPP="clang++"
 alias cdpy="cd /Users/ryandibble/NDRD/pydti/pydti"
-alias cdnd="cd /Users/ryandibble/Documents/work/ARS/CapsBackend/"
+alias cdcap="cd /Users/ryandibble/Documents/work/ARS/CapsBackend/"
 
 export EDITOR=/usr/local/bin/nvim
 export VISUAL=/usr/local/bin/nvim
