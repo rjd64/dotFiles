@@ -7,18 +7,25 @@ alias gf='git fetch'
 alias ga='git add'
 alias gg='git log --all --decorate --oneline --graph'
 alias gc='git checkout'
+alias gp='git pull'
 alias vim='nvim'
 alias vi='nvim'
 alias ls="ls -G"
 alias lsa="ls -l -a -G"
 alias ll="ls -l"
 alias CPP="clang++"
+alias cdpy="cd /Users/ryandibble/NDRD/pydti/pydti"
+alias cdnd="cd /Users/ryandibble/Documents/work/ARS/CapsBackend/"
 
 export EDITOR=/usr/local/bin/nvim
 export VISUAL=/usr/local/bin/nvim
+#export READER=/usr/local/bin/zathura
 #export VIM=/usr/local/bin/nvim
 #export VIMRUNTIME=/usr/local/share/nvim/runtime
 
+#matlab path
+export PATH="/Applications/MATLAB_R2023a.app/bin:$PATH"
+export PATH="/usr/bin/java:$PATH"
 #pyenv setup
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
@@ -43,4 +50,20 @@ export FSLDIR PATH
 . ${FSLDIR}/etc/fslconf/fsl.sh
 
 export PS1="\[$(tput bold)\]\[\033[38;5;238m\]\u\[$(tput sgr0)\] \T \[$(tput sgr0)\]\[\033[38;5;244m\][\[$(tput sgr0)\]\[\033[38;5;65m\]\w\[$(tput sgr0)\]\[\033[38;5;244m\]]\[$(tput sgr0)\]: \\$ \[$(tput sgr0)\]"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/Users/ryandibble/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/ryandibble/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/Users/ryandibble/opt/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/ryandibble/opt/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
 
