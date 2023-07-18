@@ -9,6 +9,9 @@ g.loaded_netrwSettings = 1
 
 set.wildignore = {'*.o', '*.so', '*.pyc', '*.class', '*.hi'}
 
+--allow system clipboard to access yank, del, etc...
+-- set.clipboard = unnamedplus
+
 set.confirm = true
 set.vb = true
 
